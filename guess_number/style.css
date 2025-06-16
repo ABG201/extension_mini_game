@@ -1,0 +1,120 @@
+/* Enhanced CSS for Guess the Number Game */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+}
+
+.game-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    
+}
+
+.settings {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.settings label {
+    font-weight: 600;
+    margin-right: 10px;
+    color: #333;
+}
+
+.settings select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    border: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.timer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff5722;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* Floating emoji confetti */
+.floating-emoji {
+    position: absolute;
+    font-size: 2rem;
+    animation: floatUp 2s ease-out forwards;
+    pointer-events: none;
+    z-index: 999;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-200px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+
+/* Enhanced button styling */
+#submitBtn, #newGameBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+#submitBtn:hover, #newGameBtn:hover {
+    background-color: #45a049;
+}

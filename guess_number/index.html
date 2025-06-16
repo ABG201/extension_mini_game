@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Number</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="game-card">
+      <h1 class="title">🎯 Guess Number</h1>
+
+      <div class="settings">
+        <label for="mode">Mode:</label>
+        <select id="mode">
+          <option value="classic" selected>Classic</option>
+          <option value="timer">Timer</option>
+        </select>
+      </div>
+
+      <div class="settings">
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty">
+          <option value="easy">Easy (1–50)</option>
+          <option value="medium" selected>Medium (1–100)</option>
+          <option value="hard">Hard (1–200)</option>
+        </select>
+      </div>
+
+      <div id="timer" class="timer" style="display:none">Time: 60s</div>
+
+      <p class="subtitle">I'm thinking of a number...</p>
+
+      <div class="input-section">
+        <input type="number" id="guessInput" placeholder="Enter your guess" />
+        <button id="submitBtn">Submit</button>
+      </div>
+
+      <div class="feedback" id="feedback"></div>
+      <div class="attempts" id="attempts">Attempts: 0</div>
+
+      <button id="newGameBtn" style="display:none">New Game</button>
+
+      <div class="leaderboard-section">
+        <h3>🏆 Leaderboard</h3>
+        <ul id="leaderboard"></ul>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
